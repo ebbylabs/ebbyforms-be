@@ -43,9 +43,9 @@ app.get('/api/me', async (req, res) => {
       user = await User.create({
         clerkId: userId,
         email: sessionClaims?.email ?? null,
-        firstName: sessionClaims?.firstName ?? null,
-        lastName: sessionClaims?.lastName ?? null,
-        imageUrl: sessionClaims?.imageUrl ?? null
+        firstName: sessionClaims?.first_name ?? null,
+        lastName: sessionClaims?.last_name ?? null,
+        imageUrl: sessionClaims?.image_url ?? null
       });
     }
 
